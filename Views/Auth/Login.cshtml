@@ -1,0 +1,40 @@
+﻿@model FishUsaWebApp.Models.ViewModels.LoginViewModel
+
+@{
+    ViewData["Title"] = "Employee Login";
+}
+
+<div class="container mt-5" style="max-width: 420px;">
+    <div class="card shadow-sm">
+        <div class="card-body">
+            <h1 class="h3 mb-4">Employee Login</h1>
+
+            <form asp-controller="Auth" asp-action="Login" method="post">
+                @Html.AntiForgeryToken()
+
+                <div class="mb-3">
+                    <label asp-for="EmployeeCode" class="form-label">Employee Code</label>
+                    <input asp-for="EmployeeCode"
+                           class="form-control form-control-lg"
+                           maxlength="4"
+                           inputmode="numeric"
+                           autocomplete="off"
+                           type="password"
+                           autofocus />
+                    <span asp-validation-for="EmployeeCode" class="text-danger"></span>
+                </div>
+
+                @if (!string.IsNullOrWhiteSpace(Model.ErrorMessage))
+                {
+                    <div class="alert alert-danger">
+                        @Model.ErrorMessage
+                    </div>
+                }
+
+                <button type="submit" class="btn btn-primary w-100">
+                    Login
+                </button>
+            </form>
+        </div>
+    </div>
+</div>

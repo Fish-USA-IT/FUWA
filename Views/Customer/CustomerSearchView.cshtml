@@ -1,0 +1,33 @@
+﻿@model FishUsaWebApp.Models.ViewModels.CustomerModels.CustomerSearchViewModel
+@using FishUsaWebApp.Models.ViewModels.CommonModels
+
+@{
+    ViewData["Title"] = "Customer Search";
+}
+
+@await Component.InvokeAsync("SearchResults", new
+{
+    model = new SearchPageViewModel
+    {
+        Title = "Customer Search",
+        Description = "Search for existing customers.",
+        Controller = "Customer",
+        Action = "Search",
+
+        SearchFilters = Model.SearchFilters,
+        ActiveFilters = Model.ActiveFilters,
+        HasSearched = Model.HasSearched,
+
+        Source = Model.Results,
+
+        Columns = SearchFields.Customers,
+
+        ViewController = "Customer",
+        ViewAction = "View",
+        IdPropertyName = "Id",
+
+        Page = Model.Page,
+        PageSize = Model.PageSize,
+        HasNextPage = Model.HasNextPage
+    }
+})

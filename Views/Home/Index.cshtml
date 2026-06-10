@@ -1,0 +1,97 @@
+﻿@model FishUsaWebApp.Models.ViewModels.HomeNetSuiteViewModel
+
+@{
+    ViewData["Title"] = "Dashboard";
+}
+
+<div class="container mt-4">
+    <h1>FishUSA NetSuite Portal</h1>
+
+    @if (Model.LoggedInEmployee is not null)
+    {
+        <p class="text-muted">
+            Welcome,
+            <strong>
+                @Model.LoggedInEmployee.FirstName
+                @Model.LoggedInEmployee.LastName
+            </strong>
+        </p>
+    }
+    <div class="card bg-light shadow-lg">
+        <div class="card-body">
+            <div class="row mt-4">
+                <div class="col-md-4 mb-4">
+                    <div class="card shadow-sm h-100 bg-white">
+                        <div class="card-body d-flex flex-column">
+                            <h3>Customers</h3>
+
+                            <p>
+                                Create new customer records or search for existing customers.
+                            </p>
+
+                            <div class="mt-auto d-grid gap-2">
+                                <a asp-controller="Customer"
+                                   asp-action="Create"
+                                   class="btn btn-primary">
+                                    New Customer
+                                </a>
+
+                                <a asp-controller="Customer"
+                                   asp-action="Search"
+                                   class="btn btn-primary">
+                                    Existing Customer
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 mb-4">
+                    <div class="card shadow-sm h-100 bg-white">
+                        <div class="card-body d-flex flex-column">
+                            <h3>Sales Orders</h3>
+
+                            <p>
+                                Create new sales orders or search for existing sales orders.
+                            </p>
+
+                            <div class="mt-auto d-grid gap-2">
+                                <a asp-controller="SalesOrder"
+                                   asp-action="Create"
+                                   class="btn btn-primary">
+                                    New Sales Order
+                                </a>
+
+                                <a asp-controller="SalesOrder"
+                                   asp-action="Search"
+                                   class="btn btn-primary">
+                                    Existing Sales Order
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 mb-4">
+                    <div class="card shadow-sm h-100 bg-white">
+                        <div class="card-body d-flex flex-column">
+                            <h3>Employees</h3>
+
+                            <p>
+                                Search for existing employee records.
+                            </p>
+
+                            <div class="mt-auto d-grid gap-2">
+                                <a asp-controller="Employee"
+                                   asp-action="ViewLoggedIn"
+                                   class="btn btn-primary">
+                                    Existing Employee
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

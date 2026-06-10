@@ -1,0 +1,257 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+.form-floating > .form-control-plaintext::placeholder, .form-floating > .form-control::placeholder {
+  color: var(--bs-secondary-color);
+  text-align: end;
+}
+
+.form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
+  text-align: start;
+}
+
+.btn-primary {
+    --bs-btn-bg: #010066;
+    --bs-btn-border-color: #010066;
+}
+
+.form-select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none' viewBox='0 0 16 16'%3E%3Cpath d='M2 5.5L8 11.5L14 5.5' stroke='%23212121' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center;
+    background-size: 16px;
+    padding-right: 2.5rem;
+}
+
+body.dark-mode {
+    background-color: #1e1e1e;
+    color: #f0f0f0;
+}
+
+body.dark-mode .card {
+    background-color: #2d2d2d;
+    color: #f0f0f0;
+    border-color: #444;
+}
+
+body.dark-mode .navbar {
+    background-color: #252526 !important;
+}
+
+body.dark-mode .navbar-brand,
+body.dark-mode .nav-link {
+    color: #f0f0f0 !important;
+}
+
+body.dark-mode .table {
+    color: #f0f0f0;
+}
+
+body.dark-mode .table-striped > tbody > tr:nth-of-type(odd) {
+    background-color: #333;
+}
+
+body.dark-mode .form-control {
+    background-color: #3c3c3c;
+    color: #f0f0f0;
+    border-color: #555;
+}
+
+body.dark-mode .form-control:focus {
+    background-color: #3c3c3c;
+    color: #f0f0f0;
+}
+
+body.dark-mode .bg-light,
+body.dark-mode .bg-white {
+    background-color: #2d2d2d !important;
+    color: #f0f0f0 !important;
+}
+
+body.dark-mode .card.bg-light,
+body.dark-mode .card.bg-white {
+    background-color: #2d2d2d !important;
+}
+
+body.dark-mode .border,
+body.dark-mode .border-top,
+body.dark-mode .border-bottom {
+    border-color: #444 !important;
+}
+
+body.dark-mode .btn-outline-secondary {
+    color: #f0f0f0 !important;
+    border-color: #777 !important;
+}
+
+body.dark-mode .btn-outline-secondary:hover {
+    background-color: #444 !important;
+    color: #fff !important;
+}
+
+body.dark-mode label,
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode p,
+body.dark-mode td,
+body.dark-mode th {
+    color: #f0f0f0 !important;
+}
+
+body.dark-mode .form-control::placeholder {
+    color: #aaa !important;
+}
+
+body.dark-mode .table-striped > tbody > tr:nth-of-type(odd) > * {
+    background-color: #333 !important;
+    color: #f0f0f0 !important;
+}
+
+body.dark-mode .table-striped > tbody > tr:nth-of-type(even) > * {
+    background-color: #2d2d2d !important;
+    color: #f0f0f0 !important;
+}
+
+body.dark-mode .text-muted {
+    color: #f0f0f0 !important;
+}
+
+body.dark-mode .form-control,
+body.dark-mode .form-select {
+    background-color: #2b2b2b !important;
+    color: #f8f9fa !important;
+    border-color: #555 !important;
+}
+
+body.dark-mode .form-control:focus,
+body.dark-mode .form-select:focus {
+    background-color: #2b2b2b !important;
+    color: #f8f9fa !important;
+    border-color: #6ea8fe !important;
+    box-shadow: 0 0 0 0.2rem rgba(110, 168, 254, 0.25) !important;
+}
+
+body.dark-mode .form-control::placeholder {
+    color: #a0a0a0 !important;
+}
+
+body.dark-mode .form-select {
+    color-scheme: dark !important;
+}
+
+body.dark-mode .form-control:disabled,
+body.dark-mode .form-select:disabled {
+    background-color: #202020 !important;
+    color: #888 !important;
+}
+
+body.dark-mode textarea,
+body.dark-mode select,
+body.dark-mode input {
+    background-color: #2b2b2b !important;
+    color: #f8f9fa !important;
+    border-color: #555 !important;
+}
+
+body.dark-mode textarea::placeholder,
+body.dark-mode input::placeholder {
+    color: #a0a0a0 !important;
+}
+
+body.dark-mode .form-select {
+    background-color: #3c3c3c !important;
+    color: #f0f0f0 !important;
+    border-color: #555 !important;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='white' viewBox='0 0 16 16'%3E%3Cpath d='M1.5 5.5 8 12l6.5-6.5' stroke='white' stroke-width='2' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center;
+    background-size: 16px;
+    padding-right: 2.5rem;
+}
+
+body.dark-mode .form-select:focus {
+    background-color: #3c3c3c !important;
+    color: #f0f0f0 !important;
+    border-color: #6ea8fe !important;
+    box-shadow: 0 0 0 0.2rem rgba(110, 168, 254, 0.25) !important;
+}
+
+body.dark-mode .form-select option {
+    background-color: #3c3c3c !important;
+    color: #f0f0f0 !important;
+}
+
+body.dark-mode .nav-tabs {
+    border-bottom-color: #555 !important;
+}
+
+body.dark-mode .nav-tabs .nav-link {
+    color: #f0f0f0 !important;
+    background-color: transparent !important;
+    border-color: transparent !important;
+}
+
+body.dark-mode .nav-tabs .nav-link:hover {
+    border-color: #555 #555 #555 !important;
+    background-color: #333 !important;
+}
+
+body.dark-mode .nav-tabs .nav-link.active {
+    color: #ffffff !important;
+    background-color: #2d2d2d !important;
+    border-color: #555 #555 #2d2d2d !important;
+}
+
+body.dark-mode .tab-content {
+    background-color: #2d2d2d !important;
+    color: #f0f0f0 !important;
+    border-color: #555 !important;
+}
+
+body.dark-mode .table {
+    --bs-table-bg: #2d2d2d;
+    --bs-table-color: #f0f0f0;
+    --bs-table-striped-bg: #333333;
+    --bs-table-striped-color: #f0f0f0;
+    --bs-table-hover-bg: #3a3a3a;
+    --bs-table-hover-color: #ffffff;
+    --bs-table-border-color: #555555;
+}
+
+body.dark-mode .table > thead {
+    background-color: #2d2d2d !important;
+}
+
+body.dark-mode .table > thead > tr > th {
+    background-color: #2d2d2d !important;
+    color: #f0f0f0 !important;
+    border-color: #555 !important;
+}
