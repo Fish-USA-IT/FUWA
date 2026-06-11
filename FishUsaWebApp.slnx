@@ -1,4 +1,3 @@
 <Solution>
-  <Project Path="../NetSuite_SDK/src/NetSuite.SchemaSdk/NetSuite.SchemaSdk.csproj" />
   <Project Path="FishUsaWebApp.csproj" />
 </Solution>

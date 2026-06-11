@@ -25,7 +25,10 @@ if (!app.Environment.IsDevelopment())
     app.UseHsts();
 }
 
-app.UseHttpsRedirection();
+if (app.Environment.IsDevelopment())
+{
+    app.UseHttpsRedirection();
+}
 
 app.MapStaticAssets();
 
@@ -34,6 +37,13 @@ app.UseRouting();
 app.UseSession();
 
 app.UseAuthorization();
+
+app.MapControllerRoute(
+    name: "default",
+    pattern: "{controller=Auth}/{action=Login}/{id?}")
+    .WithStaticAssets();
+
+app.MapGet("/health", () => Results.Ok("OK"));
 
 app.MapControllerRoute(
     name: "default",
