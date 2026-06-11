@@ -3,7 +3,7 @@ using NetSuite.SchemaSdk.DependencyInjection;
 var builder = WebApplication.CreateBuilder(args);
 
 var port = Environment.GetEnvironmentVariable("PORT") ?? "8080";
-builder.WebHost.UseUrls($"https://0.0.0.0:{port}");
+builder.WebHost.UseUrls($"http://0.0.0.0:{port}");
 
 builder.Services.AddControllersWithViews();
 
@@ -24,11 +24,7 @@ if (!app.Environment.IsDevelopment())
     app.UseExceptionHandler("/Home/Error");
     app.UseHsts();
 }
-
-if (app.Environment.IsDevelopment())
-{
-    app.UseHttpsRedirection();
-}
+else { app.UseHttpsRedirection(); }
 
 app.MapStaticAssets();
 
